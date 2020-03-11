@@ -2,7 +2,7 @@
 
 return [
     'memcached' => [
-        'host' => 'memcached',
+        'host' => 'runner.memcached',
         'port' => '11211'
     ],
 ];
