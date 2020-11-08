@@ -22,4 +22,36 @@ Run migrations
 ```
 
 #### Access via browser
-[http://localhost:39085](http://localhost:39085/)
+1. Add  
+``
+ 127.0.0.1 testrunner.local
+``  
+to your hosts file
+2. Run  
+``
+ composer install
+``  
+in docker container `` Connect to container ``
+
+3. Init migrations  
+See `` Run migrations `` section above
+
+4. Open [http://testrunner.local:39000](http://testrunner.local:39000)
+
+5. Login in system:  
+`` Login: user.default@runner.com ``  
+`` Password: 111 ``  
+
+#### Other
+
+1. Connect to container  
+`` 
+docker exec -it testrunner-php bash
+``  
+
+2. Connect to MySql in Storm:  
+`` Host: localhost ``  
+`` Port: 39002 ``  
+`` Login: admin ``  
+`` Password: admin ``  
+`` Database: web `` 
