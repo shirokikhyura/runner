@@ -202,6 +202,21 @@ return [
                 ],
             ],
         ],
+        'TestRun-result-artifacts-callback' => [
+            'type' => 'Segment',
+            'options' => [
+                'route' => '/test-run/result/artifacts/:id',
+                'defaults' => [
+                    'allowedMethods' => ['POST'],
+                    'controller' => 'sebaks-zend-mvc-api-controller',
+                    'routeCriteria' => 'id',
+                    'service' => ResultAction\ArtifactsService::class,
+                    'viewModel' => ApiViewModel::class,
+//                    'changesValidator' => ResultAction\ChangesValidator::class,
+                    'criteriaValidator' => 'TestRun-crud-id-validator',
+                ],
+            ],
+        ],
         'TestRun-delete-reference' => [
             'type' => 'Segment',
             'options' => [

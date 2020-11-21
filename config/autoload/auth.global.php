@@ -12,6 +12,7 @@ return [
                 'TestRun-save-output',
                 'TestRun-hosts-ready-callback',
                 'TestRun-result-callback',
+                'TestRun-result-artifacts-callback',
                 'TestCase-existing-classes',
                 'Workers-response-health-check',
                 'Workers-response-update-code',

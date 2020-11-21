@@ -65,10 +65,10 @@ class Service implements ServiceInterface
      */
     public function handle($criteria, $changes)
     {
-        $consumersCount = $this->rabbitMqApiService->getConsumersCount();
-        if ($consumersCount == 0) {
-            throw new \RuntimeException('Not found RabbitMQ consumers');
-        }
+//        $consumersCount = $this->rabbitMqApiService->getConsumersCount();
+//        if ($consumersCount == 0) {
+//            throw new \RuntimeException('Not found RabbitMQ consumers');
+//        }
 
         /** @var TestRun $testRun */
         $this->testRun = $this->testRunRepository->findById($criteria['id']);
